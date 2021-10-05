@@ -1,7 +1,7 @@
 # ubuntu-in-termux
 This is a script by which you can install Ubuntu in your termux application without rooted phone
 
-# FULLY UPDATED TO UBUNTU 19.04 DISCO
+# FULLY UPDATED TO UBUNTU 20.04 / 18.04 DISCO
 
 Steps
 1. Update termux: apt-get update && apt-get upgrade -y
@@ -17,7 +17,7 @@ Steps
 11. Now just start ubuntu: ./start.sh
 
 在非 termux 环境下，建议手动执行
-1. 下载 ubuntu 镜像： wget http://cdimage.ubuntu.com/ubuntu-base/releases/18.04.3/release/ubuntu-base-18.04.3-base-amd64.tar.gz -O ubuntu.tar.gz
+1. 下载 ubuntu 镜像： wget http://cdimage.ubuntu.com/ubuntu-base/releases/20.04/release/ubuntu-base-20.04.3-base-arm64.tar.gz -O ubuntu.tar.gz
 2. 解压 ubuntu 镜像：mkdir ubuntu-fs && cd ubuntu-fs && tar xzf ../ubuntu.tar.gz
 3. 用包管理器安装 proot，或者下载编译好的 proot：https://github.com/proot-me/proot-static-build/releases
 4. 执行 proot： proot -0 -r ubuntu-fs -b /dev -b /proc -b ubuntu-fs/tmp:/dev/shm /usr/bin/env -i HOME=/root PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games TERM=screen LANG=C.UTF-8 /bin/bash --login
